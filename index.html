@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html  lang="undefined">
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/0.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Home</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <style>
+        
+        /* фиксированное верхнее меню*/
+        
+        .top-nav {
+            background: #555555;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+            left: 0;
+            opacity: 0.95;
+            padding: 8px;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 9999;
+        }
+        
+        .topnav-wrapper {
+            margin: 0 auto;
+            max-width: 980px;
+        }
+        
+        .top-logo {
+            color: #ddd;
+            font: bold 16px/20px "Crete Round", serif;
+            padding-left: 10px;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+        }
+        
+        .top-logo a {
+            color: #B8B8B8;
+            text-decoration: none;
+        }
+        
+        .top-logo a:hover {
+            color: #ddd;
+        }
+        
+        .topnav-right {
+            float: right;
+        }
+        
+        .right-menu {
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .right-menu li {
+            float: left;
+            list-style-type: none;
+            margin: 0;
+        }
+        
+        .right-menu li a {
+            color: #B8B8B8;
+            display: block;
+            padding: 0.05em 0.75em;
+            text-decoration: none;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+        }
+        
+        .right-menu li a:hover {
+            color: #fff;
+            text-shadow: none;
+        }
+        
+        .right-menu li span {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 25px 10px 0;
+        }
+        
+        h1 {
+            padding: 50px 0;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        .info {
+            color: rgba(78, 78, 78, 0.8);
+            width: 100%;
+            margin: 40px auto;
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        .info a {
+            color: #bbb;
+            text-decoration: none;
+        }
+        
+        .info a:hover {
+            color: #888;
+        }
+        /* Конец стилей демо-страницы */
+        /* Базовый контейнер табов */
+        
+        .tabs {
+            min-width: 320px;
+            max-width: 940px;
+            padding: 0px;
+            margin: 0 auto;
+        }
+        /* Стили секций с содержанием */
+        
+        .tabs > section {
+            display: none;
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+        
+        .tabs > section > p {
+            margin: 0 0 5px;
+            line-height: 1.5;
+            color: #383838;
+            /* прикрутим анимацию */
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
+        /* Описываем анимацию свойства opacity */
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Прячем чекбоксы */
+        
+        .tabs > input {
+            display: none;
+            position: absolute;
+        }
+        /* Стили переключателей вкладок (табов) */
+        
+        .tabs > label {
+            display: inline-block;
+            margin: 0 0 -1px;
+            padding: 15px 25px;
+            font-weight: 600;
+            text-align: center;
+            color: #aaa;
+            border: 0px solid #ddd;
+            border-width: 1px 1px 1px 1px;
+            background: #f1f1f1;
+            border-radius: 3px 3px 0 0;
+        }
+      
+        /* Изменения стиля переключателей вкладок при наведении */
+        
+        .tabs > label:hover {
+            color: #888;
+            cursor: pointer;
+        }
+        /* Стили для активной вкладки */
+        
+        .tabs > input:checked + label {
+            color: #555;
+            border-top: 1px solid #c8695a;
+            border-bottom: 1px solid #fff;
+            background: #fff;
+        }
+        /* Активация секций с помощью псевдокласса :checked */
+        
+        #tab1:checked ~ #content-tab1,
+        #tab2:checked ~ #content-tab2,
+        #tab3:checked ~ #content-tab3,
+        #tab4:checked ~ #content-tab4,
+        #tab5:checked ~ #content-tab5,
+        #tab6:checked ~ #content-tab6,
+        #tab7:checked ~ #content-tab7,
+        #tab8:checked ~ #content-tab8,
+        #tab9:checked ~ #content-tab9,
+        #tab10:checked ~ #content-tab10,
+        #tab11:checked ~ #content-tab11,
+        #tab12:checked ~ #content-tab12,
+        #tab13:checked ~ #content-tab13
+         {
+            display: block;
+        }
+        
+        /* Изменяем внутренние отступы 
+*  переключателей для малых экранов
+*/
+        
+        @media screen and (max-width: 400px) {
+            .tabs > label {
+                padding: 15px;
+            }
+        }
+    </style>
+  
+  <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 7705550, onlyWidgets: true});
+</script>
+  
+</head>
+<body>
+  
+  <section class="menu menu1 cid-sjKdLiuzfu" once="menu" id="menu1-1">
+    
+
+    <nav class="navbar navbar-dropdown navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="https://theendarts.xyz">
+                        <img src="assets/images/0.png" alt="TheEnd" style="height: 3rem;">
+                    </a>
+                </span>
+                
+            </div>
+            
+            
+        </div>
+    </nav>
+</section>
+
+<section class="header14 cid-sjKdUAsAux mbr-fullscreen mbr-parallax-background" id="header14-2">
+
+    
+
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(35, 35, 35);">
+    </div>
+
+    <div class="container">
+        <div class="media-container-row">
+
+            <div class="mbr-figure" style="width: 65%;">
+                <img src="assets/images/1570884898.jpg" alt="PM">
+            </div>
+
+            <div class="media-content">
+                <h1 class="mbr-section-title pb-3 align-left mbr-white mbr-fonts-style display-1">
+                    Пластиковые<br>Воспоминания</h1>
+                <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-white mbr-fonts-style display-7"><div><strong>Статус:</strong> вышел
+</div><div><strong>Год:</strong> 2015
+</div><div><span style="font-size: 1rem;"><strong>Жанр:</strong>&nbsp;&nbsp;</span><span style="font-size: 1rem;">Драма,&nbsp;</span><span style="font-size: 1rem;">Фантастика, Комедия, Андроиды, Романтика 
+</span></div><div><strong>Студия:
+ </strong>Doga Kobo</div><div><strong>Режиссер:
+</strong>&nbsp;
+<span style="font-size: 1rem;">Фудзивара Ёсиюки&nbsp;</span></div><div><strong>Серии:</strong> 13
+</div><div><strong>Перевод:
+</strong>&nbsp;<span style="font-size: 1rem;"><a href="https://www.anilibria.tv/" class="text-white">AniLibria</a></span></div></h3>
+                <div class="mbr-section-text  pb-3 "> 
+                    <p class="mbr-text align-left mbr-white mbr-fonts-style display-7"><strong>Описание:</strong><br> Действия всей картины происходит в недалёком будущем, там, где наравне с человеком стали выступать андроиды, которых практически и не отличить от людей. Они распространились по всему миру и все бы было хорошо, но срок службы даже у самого совершенного андроида, который может копировать даже самые трудные и сложные эмоции человека, очень мал. Для того, что бы починить и восстановить андроид, который отслужил свой срок, создается специальный отдел. Одним из сотрудников этого отдела становится Цукас Мизугаки. Работа по восстановлению вышедших из строя роботов проходит гладко, но однажды происходит нечто… Нас ждет очень трогательная история отношений двух совершенно разных героев, один из которых человек, а другой андроид.</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="header1 cid-sjKeZGOARh" id="header16-3">
+
+    
+
+    
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 align-center">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">
+                    Cмотреть онлайн</h1>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="cid-sjKiPYn6ux">
+
+    
+
+
+
+                <div class="tabs">
+    <input id="tab1" type="radio" name="tabs" checked>
+    <label for="tab1" title="Серия 1">01</label>
+ 
+    <input id="tab2" type="radio" name="tabs">
+    <label for="tab2" title="Серия 2">02</label>
+ 
+    <input id="tab3" type="radio" name="tabs">
+    <label for="tab3" title="Серия 3">03</label>
+ 
+    <input id="tab4" type="radio" name="tabs">
+    <label for="tab4" title="Серия 4">04</label>
+
+    <input id="tab5" type="radio" name="tabs">
+    <label for="tab5" title="Серия 5">05</label>
+
+    <input id="tab6" type="radio" name="tabs">
+    <label for="tab6" title="Серия 6">06</label>
+
+    <input id="tab7" type="radio" name="tabs">
+    <label for="tab7" title="Серия 7">07</label>
+
+    <input id="tab8" type="radio" name="tabs">
+    <label for="tab8" title="Серия 8">08</label>
+
+    <input id="tab9" type="radio" name="tabs">
+    <label for="tab9" title="Серия 9">09</label>
+
+    <input id="tab10" type="radio" name="tabs">
+    <label for="tab10" title="Серия 10">10</label>
+
+    <input id="tab11" type="radio" name="tabs">
+    <label for="tab11" title="Серия 11">11</label>
+
+        <input id="tab12" type="radio" name="tabs">
+    <label for="tab12" title="Серия 12">12</label>
+
+        <input id="tab13" type="radio" name="tabs">
+    <label for="tab13" title="Серия 13">13</label>
+ 
+    <section id="content-tab1">
+        <p>
+                Здесь размещаете любое содержание....
+        </p>
+    </section>  
+    <section id="content-tab2">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section> 
+    <section id="content-tab3">
+        <p>
+          Здесь размещаете любое содержание....
+                </p>
+    </section> 
+    <section id="content-tab4">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>  
+    <section id="content-tab5">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab6">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab7">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab8">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab9">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab10">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab11">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab12">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+    <section id="content-tab13">
+        <p>
+          Здесь размещаете любое содержание....
+        </p>
+    </section>
+
+
+</div>
+                
+            </div>
+
+</section>
+
+<section class="cid-sjKkcSnIPw" id="video3-6">
+
+    
+    
+    <figure class="mbr-figure align-center container">
+        <div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
+</script>
+        
+    </figure>
+</section>  
+  
+  
+</body>
+</html>
